@@ -11,6 +11,7 @@ In Go, concurrency is handled through **goroutines** and **channels**, which ena
 1. **Basic Goroutine**
    - A goroutine is a lightweight thread managed by the Go runtime.
    - Example code to run multiple goroutines concurrently.
+
    ```go
    func someFunc(num string) {
        fmt.Println(num)
@@ -24,8 +25,10 @@ In Go, concurrency is handled through **goroutines** and **channels**, which ena
        fmt.Println("Hi")
    }
    ```
+
 2. **Select Statement**
    - The `select` statement allows you to wait on multiple channel operations. The first channel to send or receive a value is processed.
+
 ```go
 func main() {
     myChannel := make(chan string)
@@ -70,6 +73,7 @@ func main() {
 }
 
 ```
+
 6. **Done Channel**
    - A` done` channel is used to signal the termination of a goroutine.
 
@@ -96,8 +100,10 @@ func main() {
 }
 
 ```
+
 8. **Pipeline**
    - Pipelines are a series of stages where the output of one stage is the input to the next, connected via channels.
+
 ```go
 func sliceToChannel(num []int) <-chan int {
     out := make(chan int)
@@ -131,6 +137,7 @@ func main() {
 }
 
 ```
+
 ### Conclusion
 
 This repository demonstrates fundamental Go concurrency patterns such as goroutines, channels, and more advanced patterns like pipelines. Understanding these concepts will enable you to write efficient concurrent programs in Go.
