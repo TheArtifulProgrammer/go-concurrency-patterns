@@ -51,7 +51,7 @@ func main() {
 
 ```
 
-4. **Buffered vs Unbuffered Channels**
+3. **Buffered vs Unbuffered Channels**
    - Buffered channels can hold values without a receiver being ready.
    - Example showing how buffered channels work with the `select` statement.
   
@@ -74,8 +74,8 @@ func main() {
 
 ```
 
-6. **Done Channel**
-   - A` done` channel is used to signal the termination of a goroutine.
+4. **Done Channel**
+   - A`done` channel is used to signal the termination of a goroutine.
 
 ```go
 func doWork(done <-chan bool) {
@@ -101,7 +101,7 @@ func main() {
 
 ```
 
-8. **Pipeline**
+5. **Pipeline**
    - Pipelines are a series of stages where the output of one stage is the input to the next, connected via channels.
 
 ```go
@@ -142,4 +142,4 @@ func main() {
 
 This repository demonstrates fundamental Go concurrency patterns such as goroutines, channels, and more advanced patterns like pipelines. Understanding these concepts will enable you to write efficient concurrent programs in Go.
 
-### I had much fun learning these patterns, Happy Hacking 💻!
+### I had much fun learning these patterns, Happy Hacking 💻
